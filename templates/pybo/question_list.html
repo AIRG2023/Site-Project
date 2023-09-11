@@ -1,8 +1,9 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"><div class="container my-3">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<div class="container my-3">
     <table class="table">
         <thead>
-        <tr class="table-dark">
+        <tr class="table">
             <th>번호</th>
             <th>제목</th>
             <th>작성일시</th>
@@ -14,7 +15,9 @@
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>
-                <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
+                <a href="{% url 'pybo:detail' question_id=question.id %}">
+                    {{ question.subject }}
+                </a>
             </td>
             <td>{{ question.create_date }}</td>
         </tr>
