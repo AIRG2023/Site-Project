@@ -24,4 +24,5 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls')),
     path('', views.index, name='index'),  # '/' 에 해당되는 path
+    path('question/delete/<int:question_id>/', views.question_delete, name='question_delete'),
 ]
