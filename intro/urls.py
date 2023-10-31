@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from pybo.views import base_views
 
 app_name = 'intro'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', base_views.index, name='index'),
 ]
