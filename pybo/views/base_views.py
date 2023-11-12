@@ -8,6 +8,8 @@ from pybo.models import Question
 
 logger = logging.getLogger('pybo')
 
+def intro(request):
+    return render(request, "intro/index.html")
 
 def index(request):
     logger.info("INFO 레벨로 출력")
